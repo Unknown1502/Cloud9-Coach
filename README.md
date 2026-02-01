@@ -14,6 +14,24 @@ Inspired by Moneyball's Peter Brand, this near-real-time application analyzes hi
 **Updated:** 2026-02-02
 **Status:** ✅ COMPLETE AND TESTED
 
+How We Built It
+
+The system is built using a full-stack architecture:
+
+A Python + FastAPI backend handles data processing and analytics.
+
+A React frontend displays insights in an interactive dashboard.
+
+Match data is ingested from demo datasets and optionally from esports APIs.
+
+We use statistical analysis combined with AI-generated explanations to produce human-readable coaching feedback.
+
+Core performance metrics are computed using formulas such as:
+
+𝑃𝑒𝑟𝑓𝑜𝑟𝑚𝑎𝑛𝑐𝑒𝑆𝑐𝑜𝑟𝑒 = 𝛼⋅𝐾𝐷𝐴 + 𝛽⋅𝑂𝑏𝑗𝑒𝑐𝑡𝑖𝑣𝑒𝐶𝑜𝑛𝑡𝑟𝑜𝑙 + 𝛾⋅𝑉𝑖𝑠𝑖𝑜𝑛𝑆𝑐𝑜𝑟𝑒
+
+This allows us to quantify player performance while still providing qualitative insights through AI-generated summaries.
+
 ## 🎥 Demo Video
 [Link to your YouTube/Vimeo/Facebook Video here]
 
