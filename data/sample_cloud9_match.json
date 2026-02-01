@@ -1,0 +1,332 @@
+{
+  "series_id": "demo_2024_lcs_spring",
+  "tournament": "LCS Spring 2024",
+  "teams": ["Cloud9", "Team Liquid"],
+  "games": [
+    {
+      "game_number": 1,
+      "duration": 1847,
+      "blue_team": {
+        "name": "Cloud9",
+        "won": true,
+        "players": [
+          {
+            "summonerName": "Blaber",
+            "role": "Jungle",
+            "championName": "Lee Sin",
+            "stats": {
+              "kills": 7,
+              "deaths": 2,
+              "assists": 9,
+              "totalMinionsKilled": 125,
+              "visionScore": 48,
+              "totalDamageDealtToChampions": 16482,
+              "goldEarned": 11250
+            }
+          },
+          {
+            "summonerName": "Berserker",
+            "role": "ADC",
+            "championName": "Jinx",
+            "stats": {
+              "kills": 9,
+              "deaths": 1,
+              "assists": 7,
+              "totalMinionsKilled": 312,
+              "visionScore": 32,
+              "totalDamageDealtToChampions": 28450,
+              "goldEarned": 14500
+            }
+          },
+          {
+            "summonerName": "Jojopyun",
+            "role": "Mid",
+            "championName": "Azir",
+            "stats": {
+              "kills": 4,
+              "deaths": 2,
+              "assists": 12,
+              "totalMinionsKilled": 289,
+              "visionScore": 28,
+              "totalDamageDealtToChampions": 19200,
+              "goldEarned": 13100
+            }
+          },
+          {
+            "summonerName": "Fudge",
+            "role": "Top",
+            "championName": "Jayce",
+            "stats": {
+              "kills": 3,
+              "deaths": 3,
+              "assists": 8,
+              "totalMinionsKilled": 267,
+              "visionScore": 22,
+              "totalDamageDealtToChampions": 17800,
+              "goldEarned": 12200
+            }
+          },
+          {
+            "summonerName": "Vulcan",
+            "role": "Support",
+            "championName": "Thresh",
+            "stats": {
+              "kills": 1,
+              "deaths": 2,
+              "assists": 18,
+              "totalMinionsKilled": 24,
+              "visionScore": 65,
+              "totalDamageDealtToChampions": 4200,
+              "goldEarned": 8900
+            }
+          }
+        ]
+      }
+    },
+    {
+      "game_number": 2,
+      "duration": 2105,
+      "blue_team": {
+        "name": "Cloud9",
+        "won": false,
+        "players": [
+          {
+            "summonerName": "Blaber",
+            "role": "Jungle",
+            "championName": "Viego",
+            "stats": {
+              "kills": 3,
+              "deaths": 5,
+              "assists": 4,
+              "totalMinionsKilled": 98,
+              "visionScore": 31,
+              "totalDamageDealtToChampions": 12100,
+              "goldEarned": 9800
+            }
+          },
+          {
+            "summonerName": "Berserker",
+            "role": "ADC",
+            "championName": "Aphelios",
+            "stats": {
+              "kills": 5,
+              "deaths": 4,
+              "assists": 3,
+              "totalMinionsKilled": 298,
+              "visionScore": 25,
+              "totalDamageDealtToChampions": 21500,
+              "goldEarned": 12900
+            }
+          },
+          {
+            "summonerName": "Jojopyun",
+            "role": "Mid",
+            "championName": "Sylas",
+            "stats": {
+              "kills": 2,
+              "deaths": 6,
+              "assists": 5,
+              "totalMinionsKilled": 245,
+              "visionScore": 18,
+              "totalDamageDealtToChampions": 14200,
+              "goldEarned": 10500
+            }
+          },
+          {
+            "summonerName": "Fudge",
+            "role": "Top",
+            "championName": "Gnar",
+            "stats": {
+              "kills": 1,
+              "deaths": 4,
+              "assists": 6,
+              "totalMinionsKilled": 288,
+              "visionScore": 20,
+              "totalDamageDealtToChampions": 15600,
+              "goldEarned": 11200
+            }
+          },
+          {
+            "summonerName": "Vulcan",
+            "role": "Support",
+            "championName": "Nautilus",
+            "stats": {
+              "kills": 0,
+              "deaths": 5,
+              "assists": 7,
+              "totalMinionsKilled": 18,
+              "visionScore": 42,
+              "totalDamageDealtToChampions": 3800,
+              "goldEarned": 7600
+            }
+          }
+        ]
+      }
+    },
+    {
+      "game_number": 3,
+      "duration": 1956,
+      "blue_team": {
+        "name": "Cloud9",
+        "won": true,
+        "players": [
+          {
+            "summonerName": "Blaber",
+            "role": "Jungle",
+            "championName": "Lee Sin",
+            "stats": {
+              "kills": 8,
+              "deaths": 1,
+              "assists": 11,
+              "totalMinionsKilled": 132,
+              "visionScore": 52,
+              "totalDamageDealtToChampions": 18900,
+              "goldEarned": 12400
+            }
+          },
+          {
+            "summonerName": "Berserker",
+            "role": "ADC",
+            "championName": "Jinx",
+            "stats": {
+              "kills": 10,
+              "deaths": 2,
+              "assists": 8,
+              "totalMinionsKilled": 305,
+              "visionScore": 28,
+              "totalDamageDealtToChampions": 30200,
+              "goldEarned": 15100
+            }
+          },
+          {
+            "summonerName": "Jojopyun",
+            "role": "Mid",
+            "championName": "Orianna",
+            "stats": {
+              "kills": 5,
+              "deaths": 2,
+              "assists": 13,
+              "totalMinionsKilled": 295,
+              "visionScore": 31,
+              "totalDamageDealtToChampions": 20500,
+              "goldEarned": 13800
+            }
+          },
+          {
+            "summonerName": "Fudge",
+            "role": "Top",
+            "championName": "K'Sante",
+            "stats": {
+              "kills": 2,
+              "deaths": 3,
+              "assists": 14,
+              "totalMinionsKilled": 278,
+              "visionScore": 24,
+              "totalDamageDealtToChampions": 16200,
+              "goldEarned": 11900
+            }
+          },
+          {
+            "summonerName": "Vulcan",
+            "role": "Support",
+            "championName": "Rakan",
+            "stats": {
+              "kills": 0,
+              "deaths": 2,
+              "assists": 22,
+              "totalMinionsKilled": 21,
+              "visionScore": 71,
+              "totalDamageDealtToChampions": 5100,
+              "goldEarned": 9200
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "events": {
+    "ganks": [
+      {
+        "jungler": "Blaber",
+        "lane": "top",
+        "timestamp": 180,
+        "success": false
+      },
+      {
+        "jungler": "Blaber",
+        "lane": "top",
+        "timestamp": 240,
+        "success": false
+      },
+      {
+        "jungler": "Blaber",
+        "lane": "bot",
+        "timestamp": 280,
+        "success": true
+      },
+      {
+        "jungler": "Blaber",
+        "lane": "bot",
+        "timestamp": 330,
+        "success": true
+      },
+      {
+        "jungler": "Blaber",
+        "lane": "bot",
+        "timestamp": 420,
+        "success": true
+      },
+      {
+        "jungler": "Blaber",
+        "lane": "top",
+        "timestamp": 480,
+        "success": true
+      }
+    ],
+    "first_drake": {
+      "secured": true,
+      "timestamp": 300,
+      "type": "cloud"
+    },
+    "baron_fights": [
+      {
+        "timestamp": 1260,
+        "result": "won",
+        "unspent_gold": 800
+      },
+      {
+        "timestamp": 1680,
+        "result": "lost",
+        "unspent_gold": 3400
+      }
+    ],
+    "isolated_deaths": [
+      {
+        "player": "Fudge",
+        "timestamp": 1400,
+        "location": "Top Lane",
+        "objective": "Baron spawn"
+      },
+      {
+        "player": "Jojopyun",
+        "timestamp": 1635,
+        "location": "Bot Lane",
+        "objective": "Drake spawn"
+      }
+    ],
+    "teleport_uses": [
+      {
+        "player": "Fudge",
+        "timestamp": 1180,
+        "type": "flank",
+        "successful": false
+      },
+      {
+        "player": "Fudge",
+        "timestamp": 900,
+        "type": "save tower",
+        "successful": true
+      }
+    ]
+  }
+}

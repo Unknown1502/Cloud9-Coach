@@ -1,0 +1,484 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-6);
+  gap: var(--space-6);
+  z-index: var(--z-fixed);
+  transition: all var(--transition-base);
+}
+
+/* Valorant Theme */
+.sidebar.valorant {
+  background: linear-gradient(180deg, var(--val-bg-secondary) 0%, var(--val-bg-primary) 100%);
+  border-right: 1px solid var(--val-border);
+  box-shadow: 4px 0 24px rgba(255, 70, 85, 0.1);
+}
+
+/* League Theme */
+.sidebar.league {
+  background: linear-gradient(180deg, var(--lol-bg-secondary) 0%, var(--lol-bg-primary) 100%);
+  border-right: 1px solid var(--lol-border);
+  box-shadow: 4px 0 24px rgba(10, 200, 185, 0.1);
+}
+
+/* ============================================
+   LOGO SECTION
+   ============================================ */
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.sidebar.valorant .logo-icon {
+  background: linear-gradient(135deg, var(--val-primary) 0%, var(--val-primary-dark) 100%);
+  color: white;
+  box-shadow: 0 4px 12px var(--val-glow);
+}
+
+.sidebar.league .logo-icon {
+  background: linear-gradient(135deg, var(--lol-primary) 0%, var(--lol-primary-dark) 100%);
+  color: var(--lol-bg-primary);
+  box-shadow: 0 4px 12px var(--lol-glow);
+}
+
+.logo-text {
+  flex: 1;
+}
+
+.logo-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.sidebar.valorant .logo-title {
+  color: var(--val-text-primary);
+}
+
+.sidebar.league .logo-title {
+  color: var(--lol-text-primary);
+}
+
+.logo-subtitle {
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin: 0;
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sidebar.valorant .logo-subtitle {
+  color: var(--val-text-secondary);
+}
+
+.sidebar.league .logo-subtitle {
+  color: var(--lol-text-secondary);
+}
+
+/* ============================================
+   GAME SWITCHER
+   ============================================ */
+
+.game-switcher {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.switcher-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin: 0;
+}
+
+.sidebar.valorant .switcher-label {
+  color: var(--val-text-muted);
+}
+
+.sidebar.league .switcher-label {
+  color: var(--lol-text-muted);
+}
+
+.game-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.game-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-lg);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all var(--transition-base);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.game-btn::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.sidebar.valorant .game-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--val-text-secondary);
+}
+
+.sidebar.valorant .game-btn:hover {
+  background: rgba(255, 70, 85, 0.1);
+  border-color: var(--val-border);
+  transform: translateX(4px);
+}
+
+.sidebar.valorant .game-btn.active {
+  background: rgba(255, 70, 85, 0.15);
+  border-color: var(--val-primary);
+  color: var(--val-text-primary);
+  box-shadow: 0 4px 12px rgba(255, 70, 85, 0.2);
+}
+
+.sidebar.valorant .game-btn.active::before {
+  background: var(--val-primary);
+  opacity: 1;
+}
+
+.sidebar.league .game-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--lol-text-secondary);
+}
+
+.sidebar.league .game-btn:hover {
+  background: rgba(10, 200, 185, 0.1);
+  border-color: var(--lol-border);
+  transform: translateX(4px);
+}
+
+.sidebar.league .game-btn.active {
+  background: rgba(10, 200, 185, 0.15);
+  border-color: var(--lol-primary);
+  color: var(--lol-text-primary);
+  box-shadow: 0 4px 12px rgba(10, 200, 185, 0.2);
+}
+
+.sidebar.league .game-btn.active::before {
+  background: var(--lol-primary);
+  opacity: 1;
+}
+
+.game-icon {
+  font-size: 1.25rem;
+}
+
+.game-name {
+  flex: 1;
+  text-align: left;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+
+.sidebar-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  overflow-y: auto;
+}
+
+.nav-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin: 0 0 var(--space-2) 0;
+}
+
+.sidebar.valorant .nav-label {
+  color: var(--val-text-muted);
+}
+
+.sidebar.league .nav-label {
+  color: var(--lol-text-muted);
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-lg);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all var(--transition-base);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.sidebar.valorant .nav-item {
+  background: transparent;
+  color: var(--val-text-secondary);
+}
+
+.sidebar.valorant .nav-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--val-text-primary);
+}
+
+.sidebar.valorant .nav-item.active {
+  background: rgba(255, 70, 85, 0.15);
+  color: var(--val-text-primary);
+}
+
+.sidebar.valorant .nav-item.active::before {
+  background: var(--val-primary);
+  opacity: 1;
+}
+
+.sidebar.league .nav-item {
+  background: transparent;
+  color: var(--lol-text-secondary);
+}
+
+.sidebar.league .nav-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--lol-text-primary);
+}
+
+.sidebar.league .nav-item.active {
+  background: rgba(10, 200, 185, 0.15);
+  color: var(--lol-text-primary);
+}
+
+.sidebar.league .nav-item.active::before {
+  background: var(--lol-primary);
+  opacity: 1;
+}
+
+.nav-icon {
+  font-size: 1.25rem;
+}
+
+.nav-label-text {
+  flex: 1;
+  text-align: left;
+}
+
+.nav-badge {
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.nav-badge.badge-new {
+  background: linear-gradient(135deg, var(--success) 0%, #059669 100%);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* ============================================
+   AI STATUS
+   ============================================ */
+
+.ai-status {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  margin-top: auto;
+}
+
+.sidebar.valorant .ai-status {
+  background: rgba(255, 70, 85, 0.1);
+  border: 1px solid var(--val-border);
+}
+
+.sidebar.league .ai-status {
+  background: rgba(10, 200, 185, 0.1);
+  border: 1px solid var(--lol-border);
+}
+
+.status-indicator {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.sidebar.valorant .status-dot {
+  background: var(--val-primary);
+  box-shadow: 0 0 12px var(--val-glow);
+}
+
+.sidebar.league .status-dot {
+  background: var(--lol-primary);
+  box-shadow: 0 0 12px var(--lol-glow);
+}
+
+.status-text {
+  flex: 1;
+}
+
+.status-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.sidebar.valorant .status-title {
+  color: var(--val-text-primary);
+}
+
+.sidebar.league .status-title {
+  color: var(--lol-text-primary);
+}
+
+.status-subtitle {
+  font-size: 0.75rem;
+  margin: 0;
+  opacity: 0.7;
+}
+
+.sidebar.valorant .status-subtitle {
+  color: var(--val-text-secondary);
+}
+
+.sidebar.league .status-subtitle {
+  color: var(--lol-text-secondary);
+}
+
+/* ============================================
+   SETTINGS BUTTON
+   ============================================ */
+
+.settings-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-lg);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.sidebar.valorant .settings-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--val-text-secondary);
+}
+
+.sidebar.valorant .settings-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--val-text-primary);
+}
+
+.sidebar.league .settings-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--lol-text-secondary);
+}
+
+.sidebar.league .settings-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--lol-text-primary);
+}
+
+.settings-icon {
+  font-size: 1.25rem;
+}
+
+.settings-text {
+  flex: 1;
+  text-align: left;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 240px;
+    padding: var(--space-4);
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform var(--transition-base);
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+}

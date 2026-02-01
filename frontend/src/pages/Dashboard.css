@@ -1,0 +1,651 @@
+.dashboard {
+  margin-left: 280px;
+  min-height: 100vh;
+  padding: var(--space-8);
+  position: relative;
+}
+
+/* Valorant Theme */
+.dashboard.valorant {
+  background: var(--val-bg-primary);
+  color: var(--val-text-primary);
+}
+
+/* League Theme */
+.dashboard.league {
+  background: var(--lol-bg-primary);
+  color: var(--lol-text-primary);
+}
+
+/* Animated Background Orbs */
+.dashboard::before {
+  content: '';
+  position: fixed;
+  top: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.15;
+  z-index: 0;
+  animation: float 20s ease-in-out infinite;
+}
+
+.dashboard.valorant::before {
+  background: radial-gradient(circle, var(--val-primary) 0%, transparent 70%);
+}
+
+.dashboard.league::before {
+  background: radial-gradient(circle, var(--lol-primary) 0%, transparent 70%);
+}
+
+.dashboard::after {
+  content: '';
+  position: fixed;
+  bottom: -200px;
+  left: -200px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.1;
+  z-index: 0;
+  animation: float 25s ease-in-out infinite reverse;
+}
+
+.dashboard.valorant::after {
+  background: radial-gradient(circle, var(--val-accent) 0%, transparent 70%);
+}
+
+.dashboard.league::after {
+  background: radial-gradient(circle, var(--lol-accent) 0%, transparent 70%);
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+.dashboard-header {
+  margin-bottom: var(--space-8);
+  position: relative;
+  z-index: 1;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.header-left {
+  flex: 1;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 var(--space-2) 0;
+  letter-spacing: -0.5px;
+}
+
+.dashboard.valorant .page-title {
+  background: linear-gradient(135deg, var(--val-text-primary) 0%, var(--val-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dashboard.league .page-title {
+  background: linear-gradient(135deg, var(--lol-text-primary) 0%, var(--lol-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-subtitle {
+  font-size: 1rem;
+  opacity: 0.7;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.ai-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--success) 0%, #059669 100%);
+  color: white;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.refresh-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-lg);
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.dashboard.valorant .refresh-btn {
+  background: rgba(255, 70, 85, 0.1);
+  border: 1px solid var(--val-border);
+  color: var(--val-text-primary);
+}
+
+.dashboard.valorant .refresh-btn:hover {
+  background: rgba(255, 70, 85, 0.2);
+  box-shadow: 0 4px 12px var(--val-glow);
+}
+
+.dashboard.league .refresh-btn {
+  background: rgba(10, 200, 185, 0.1);
+  border: 1px solid var(--lol-border);
+  color: var(--lol-text-primary);
+}
+
+.dashboard.league .refresh-btn:hover {
+  background: rgba(10, 200, 185, 0.2);
+  box-shadow: 0 4px 12px var(--lol-glow);
+}
+
+/* ============================================
+   STATS GRID
+   ============================================ */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+  position: relative;
+  z-index: 1;
+}
+
+.stat-card {
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard.valorant .stat-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dashboard.league .stat-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  opacity: 0.5;
+}
+
+.dashboard.valorant .stat-card.win-rate::before {
+  background: linear-gradient(90deg, var(--val-primary) 0%, var(--val-accent) 100%);
+}
+
+.dashboard.league .stat-card.win-rate::before {
+  background: linear-gradient(90deg, var(--lol-primary) 0%, var(--lol-accent) 100%);
+}
+
+.dashboard.valorant .stat-card.kda::before {
+  background: linear-gradient(90deg, #00D4FF 0%, #0080FF 100%);
+}
+
+.dashboard.league .stat-card.kda::before {
+  background: linear-gradient(90deg, #00D4FF 0%, #0080FF 100%);
+}
+
+.dashboard.valorant .stat-card.first-blood::before {
+  background: linear-gradient(90deg, var(--success) 0%, #059669 100%);
+}
+
+.dashboard.league .stat-card.first-blood::before {
+  background: linear-gradient(90deg, var(--success) 0%, #059669 100%);
+}
+
+.dashboard.valorant .stat-card.clutch::before {
+  background: linear-gradient(90deg, var(--warning) 0%, #D97706 100%);
+}
+
+.dashboard.league .stat-card.clutch::before {
+  background: linear-gradient(90deg, var(--warning) 0%, #D97706 100%);
+}
+
+.stat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.7;
+}
+
+.stat-icon {
+  font-size: 1.5rem;
+  opacity: 0.5;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: var(--space-2);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.stat-trend {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.stat-trend.positive {
+  color: var(--success);
+}
+
+.stat-trend.negative {
+  color: var(--error);
+}
+
+.trend-icon {
+  font-size: 1.25rem;
+}
+
+/* ============================================
+   CHARTS ROW
+   ============================================ */
+
+.charts-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+  position: relative;
+  z-index: 1;
+}
+
+.chart-card {
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  transition: all var(--transition-base);
+}
+
+.dashboard.valorant .chart-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dashboard.league .chart-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chart-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.chart-header {
+  margin-bottom: var(--space-6);
+}
+
+.chart-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 var(--space-1) 0;
+}
+
+.chart-subtitle {
+  font-size: 0.875rem;
+  opacity: 0.6;
+  margin: 0;
+}
+
+.chart-container {
+  width: 100%;
+  height: 280px;
+}
+
+/* ============================================
+   BOTTOM ROW
+   ============================================ */
+
+.bottom-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--space-6);
+  position: relative;
+  z-index: 1;
+}
+
+.players-card,
+.insights-card {
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  transition: all var(--transition-base);
+}
+
+.dashboard.valorant .players-card,
+.dashboard.valorant .insights-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dashboard.league .players-card,
+.dashboard.league .insights-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-header {
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 var(--space-1) 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.ai-icon {
+  font-size: 1.5rem;
+}
+
+.card-subtitle {
+  font-size: 0.875rem;
+  opacity: 0.6;
+  margin: 0;
+}
+
+/* ============================================
+   PLAYERS LIST
+   ============================================ */
+
+.players-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.player-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.dashboard.valorant .player-item {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dashboard.valorant .player-item:hover {
+  background: rgba(255, 70, 85, 0.1);
+  border-color: var(--val-border);
+}
+
+.dashboard.league .player-item {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dashboard.league .player-item:hover {
+  background: rgba(10, 200, 185, 0.1);
+  border-color: var(--lol-border);
+}
+
+.player-rank {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-lg);
+  font-size: 1.25rem;
+  font-weight: 800;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.dashboard.valorant .player-rank {
+  background: rgba(255, 70, 85, 0.15);
+  color: var(--val-primary);
+}
+
+.dashboard.league .player-rank {
+  background: rgba(10, 200, 185, 0.15);
+  color: var(--lol-primary);
+}
+
+.player-info {
+  flex: 1;
+}
+
+.player-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.player-matches {
+  font-size: 0.875rem;
+  opacity: 0.6;
+}
+
+.player-kda {
+  text-align: right;
+}
+
+.kda-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.dashboard.valorant .kda-value {
+  color: var(--val-primary);
+}
+
+.dashboard.league .kda-value {
+  color: var(--lol-primary);
+}
+
+.kda-label {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ============================================
+   INSIGHTS LIST
+   ============================================ */
+
+.insights-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.insight-item {
+  display: flex;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.insight-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+}
+
+.insight-item.critical {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.insight-item.critical::before {
+  background: var(--error);
+}
+
+.insight-item.warning {
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.insight-item.warning::before {
+  background: var(--warning);
+}
+
+.insight-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.insight-content {
+  flex: 1;
+}
+
+.insight-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 var(--space-2) 0;
+}
+
+.insight-description {
+  font-size: 0.875rem;
+  opacity: 0.8;
+  margin: 0 0 var(--space-3) 0;
+  line-height: 1.5;
+}
+
+.insight-metric {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.insight-item.critical .metric-value {
+  color: var(--error);
+}
+
+.insight-item.warning .metric-value {
+  color: var(--warning);
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 1280px) {
+  .dashboard {
+    padding: var(--space-6);
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .dashboard {
+    margin-left: 240px;
+    padding: var(--space-5);
+  }
+  
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .charts-row,
+  .bottom-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    margin-left: 0;
+    padding: var(--space-4);
+  }
+  
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .page-title {
+    font-size: 1.75rem;
+  }
+  
+  .stat-value {
+    font-size: 2rem;
+  }
+}

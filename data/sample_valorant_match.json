@@ -1,0 +1,357 @@
+{
+  "match_id": "demo_c9_valorant_2024",
+  "match_type": "BO1",
+  "tournament": "VCT Americas 2024",
+  "teams": ["Cloud9", "Sentinels"],
+  "map": "Haven",
+  "final_score": "11-13",
+  "team_orbs_collected": 7,
+  "enemy_orbs_collected": 11,
+  "rounds": [
+    {
+      "round_num": 1,
+      "team_won": true,
+      "buy_type": "pistol",
+      "target_site": "A",
+      "time_remaining": 25,
+      "won_by": "attackers",
+      "attackers_team_name": "Cloud9",
+      "attackers": [
+        {
+          "name": "OXY",
+          "agent": "Jett",
+          "kast": true,
+          "kills": 2,
+          "deaths": 0,
+          "first_death": false
+        },
+        {
+          "name": "vanity",
+          "agent": "Omen",
+          "kast": true,
+          "kills": 1,
+          "deaths": 0,
+          "first_death": false
+        },
+        {
+          "name": "xeppaa",
+          "agent": "Gekko",
+          "kast": true,
+          "kills": 0,
+          "deaths": 0,
+          "first_death": false
+        },
+        {
+          "name": "runi",
+          "agent": "Skye",
+          "kast": true,
+          "kills": 1,
+          "deaths": 1,
+          "first_death": false
+        },
+        {
+          "name": "jakee",
+          "agent": "Killjoy",
+          "kast": true,
+          "kills": 1,
+          "deaths": 0,
+          "first_death": false
+        }
+      ]
+    },
+    {
+      "round_num": 2,
+      "team_won": false,
+      "buy_type": "force",
+      "target_site": "B",
+      "time_remaining": 18,
+      "won_by": "defenders",
+      "attackers_team_name": "Cloud9",
+      "attackers": [
+        {
+          "name": "OXY",
+          "agent": "Jett",
+          "kast": false,
+          "kills": 0,
+          "deaths": 1,
+          "first_death": true
+        },
+        {
+          "name": "vanity",
+          "agent": "Omen",
+          "kast": true,
+          "kills": 1,
+          "deaths": 1,
+          "first_death": false
+        },
+        {
+          "name": "xeppaa",
+          "agent": "Gekko",
+          "kast": false,
+          "kills": 0,
+          "deaths": 1,
+          "first_death": false
+        },
+        {
+          "name": "runi",
+          "agent": "Skye",
+          "kast": true,
+          "kills": 1,
+          "deaths": 1,
+          "first_death": false
+        },
+        {
+          "name": "jakee",
+          "agent": "Killjoy",
+          "kast": false,
+          "kills": 0,
+          "deaths": 1,
+          "first_death": false
+        }
+      ]
+    },
+    {
+      "round_num": 3,
+      "team_won": false,
+      "buy_type": "eco",
+      "target_site": "C",
+      "time_remaining": 0,
+      "won_by": "defenders",
+      "attackers_team_name": "Cloud9",
+      "attackers": [
+        {
+          "name": "OXY",
+          "agent": "Jett",
+          "kast": false,
+          "kills": 0,
+          "deaths": 1,
+          "first_death": false
+        },
+        {
+          "name": "vanity",
+          "agent": "Omen",
+          "kast": true,
+          "kills": 2,
+          "deaths": 1,
+          "first_death": false
+        },
+        {
+          "name": "xeppaa",
+          "agent": "Gekko",
+          "kast": false,
+          "kills": 0,
+          "deaths": 1,
+          "first_death": false
+        },
+        {
+          "name": "runi",
+          "agent": "Skye",
+          "kast": false,
+          "kills": 0,
+          "deaths": 1,
+          "first_death": false
+        },
+        {
+          "name": "jakee",
+          "agent": "Killjoy",
+          "kast": true,
+          "kills": 1,
+          "deaths": 1,
+          "first_death": false
+        }
+      ]
+    },
+    {
+      "round_num": 4,
+      "team_won": true,
+      "buy_type": "full",
+      "target_site": "A",
+      "time_remaining": 32,
+      "won_by": "attackers",
+      "attackers_team_name": "Cloud9",
+      "attackers": [
+        {
+          "name": "OXY",
+          "agent": "Jett",
+          "kast": true,
+          "kills": 3,
+          "deaths": 0,
+          "first_death": false
+        },
+        {
+          "name": "vanity",
+          "agent": "Omen",
+          "kast": true,
+          "kills": 1,
+          "deaths": 0,
+          "first_death": false
+        },
+        {
+          "name": "xeppaa",
+          "agent": "Gekko",
+          "kast": true,
+          "kills": 0,
+          "deaths": 0,
+          "first_death": false
+        },
+        {
+          "name": "runi",
+          "agent": "Skye",
+          "kast": true,
+          "kills": 1,
+          "deaths": 1,
+          "first_death": false
+        },
+        {
+          "name": "jakee",
+          "agent": "Killjoy",
+          "kast": true,
+          "kills": 0,
+          "deaths": 1,
+          "first_death": false
+        }
+      ]
+    },
+    {
+      "round_num": 5,
+      "team_won": false,
+      "buy_type": "full",
+      "target_site": "B",
+      "time_remaining": 15,
+      "won_by": "defenders",
+      "attackers_team_name": "Cloud9",
+      "attackers": [
+        {
+          "name": "OXY",
+          "agent": "Jett",
+          "kast": false,
+          "kills": 0,
+          "deaths": 1,
+          "first_death": true
+        },
+        {
+          "name": "vanity",
+          "agent": "Omen",
+          "kast": true,
+          "kills": 2,
+          "deaths": 1,
+          "first_death": false
+        },
+        {
+          "name": "xeppaa",
+          "agent": "Gekko",
+          "kast": true,
+          "kills": 1,
+          "deaths": 1,
+          "first_death": false
+        },
+        {
+          "name": "runi",
+          "agent": "Skye",
+          "kast": false,
+          "kills": 0,
+          "deaths": 1,
+          "first_death": false
+        },
+        {
+          "name": "jakee",
+          "agent": "Killjoy",
+          "kast": true,
+          "kills": 1,
+          "deaths": 1,
+          "first_death": false
+        }
+      ]
+    },
+    {
+      "round_num": 6,
+      "team_won": false,
+      "buy_type": "full",
+      "target_site": "C",
+      "time_remaining": 12,
+      "won_by": "defenders",
+      "attackers_team_name": "Cloud9",
+      "attackers": [
+        {
+          "name": "OXY",
+          "agent": "Jett",
+          "kast": false,
+          "kills": 0,
+          "deaths": 1,
+          "first_death": true
+        },
+        {
+          "name": "vanity",
+          "agent": "Omen",
+          "kast": true,
+          "kills": 1,
+          "deaths": 1,
+          "first_death": false
+        },
+        {
+          "name": "xeppaa",
+          "agent": "Gekko",
+          "kast": false,
+          "kills": 0,
+          "deaths": 1,
+          "first_death": false
+        },
+        {
+          "name": "runi",
+          "agent": "Skye",
+          "kast": true,
+          "kills": 2,
+          "deaths": 1,
+          "first_death": false
+        },
+        {
+          "name": "jakee",
+          "agent": "Killjoy",
+          "kast": false,
+          "kills": 0,
+          "deaths": 1,
+          "first_death": false
+        }
+      ]
+    },
+    {
+      "round_num": 22,
+      "team_won": false,
+      "buy_type": "full",
+      "target_site": "C",
+      "time_remaining": 15,
+      "won_by": "defenders",
+      "round_state": "retake_3v5",
+      "attackers_team_name": "Cloud9",
+      "defenders": [
+        {
+          "name": "OXY",
+          "agent": "Jett",
+          "kast": false,
+          "kills": 0,
+          "deaths": 1,
+          "first_death": false,
+          "weapon": "Vandal"
+        },
+        {
+          "name": "vanity",
+          "agent": "Omen",
+          "kast": false,
+          "kills": 1,
+          "deaths": 1,
+          "first_death": false,
+          "weapon": "Vandal"
+        },
+        {
+          "name": "xeppaa",
+          "agent": "Gekko",
+          "kast": false,
+          "kills": 0,
+          "deaths": 1,
+          "first_death": false,
+          "weapon": "Phantom"
+        }
+      ]
+    }
+  ]
+}
