@@ -14,7 +14,7 @@ Inspired by Moneyball's Peter Brand, this near-real-time application analyzes hi
 **Updated:** 2026-02-02
 **Status:** ✅ COMPLETE AND TESTED
 
-How We Built It
+How We Built It -
 
 The system is built using a full-stack architecture:
 
@@ -28,7 +28,7 @@ We use statistical analysis combined with AI-generated explanations to produce h
 
 Core performance metrics are computed using formulas such as:
 
-𝑃𝑒𝑟𝑓𝑜𝑟𝑚𝑎𝑛𝑐𝑒𝑆𝑐𝑜𝑟𝑒 = 𝛼⋅𝐾𝐷𝐴 + 𝛽⋅𝑂𝑏𝑗𝑒𝑐𝑡𝑖𝑣𝑒𝐶𝑜𝑛𝑡𝑟𝑜𝑙 + 𝛾⋅𝑉𝑖𝑠𝑖𝑜𝑛𝑆𝑐𝑜𝑟𝑒
+            𝑃𝑒𝑟𝑓𝑜𝑟𝑚𝑎𝑛𝑐𝑒𝑆𝑐𝑜𝑟𝑒 = 𝛼⋅𝐾𝐷𝐴 + 𝛽⋅𝑂𝑏𝑗𝑒𝑐𝑡𝑖𝑣𝑒𝐶𝑜𝑛𝑡𝑟𝑜𝑙 + 𝛾⋅𝑉𝑖𝑠𝑖𝑜𝑛𝑆𝑐𝑜𝑟𝑒
 
 This allows us to quantify player performance while still providing qualitative insights through AI-generated summaries.
 
